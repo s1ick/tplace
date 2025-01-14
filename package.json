@@ -1,0 +1,31 @@
+{
+  "name": "rolluptemplate",
+  "version": "1.0.0",
+  "description": "rollup Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx rollup --config",
+    "start": "npx rollup --config --watch"
+  },
+  "author": "Matveev Ivan",
+  "type": "module",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^3.2.3",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-serve": "^2.0.1",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "scss-reset": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s1ick/template-rollup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/s1ick/template-rollup/issues"
+  },
+  "homepage": "https://github.com/s1ick/template-rollup#readme"
+}
