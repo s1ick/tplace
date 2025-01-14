@@ -106,6 +106,7 @@ npx rollup --config --watch
 
 - **Имя:** Иван Матвеев
 - **Email:** ivan.matveev@example.com
+- **Телефон:** +7 (999) 123-45-67
 - **GitHub:** [github.com/username](https://github.com/username)
 
 Спасибо за внимание! 🙂

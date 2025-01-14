@@ -1,4 +1,5 @@
-@import '../node_modules/scss-reset/src/scss/_reset.scss';
+@use '../node_modules/scss-reset/src/scss/_reset.scss' as *;
+
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

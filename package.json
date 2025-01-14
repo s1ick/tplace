@@ -12,12 +12,24 @@
   "type": "module",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "css-loader": "^7.1.2",
+    "fs": "^0.0.1-security",
     "rollup": "^3.2.3",
+    "rollup-plugin-pug": "^1.1.1",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-serve": "^2.0.1",
-    "sass": "^1.55.0"
+    "rollup-plugin-svg": "^2.0.0",
+    "rollup-plugin-svgo": "^2.0.0",
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "svgstore": "^3.0.1"
   },
   "dependencies": {
+    "rollup-plugin-live-server": "^2.0.0",
     "scss-reset": "^1.2.2"
   },
   "repository": {
