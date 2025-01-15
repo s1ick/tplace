@@ -1,0 +1,100 @@
+// Миксин для шрифтов Involve
+@font-face {
+    font-family: 'Involve';
+    src: url('/build/fonts/Evolventa-Regular.woff2') format('woff2'),
+         url('/build/fonts/Involve-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Involve';
+    src: url('/build/fonts/Involve-RegularOblique.woff2') format('woff2'),
+         url('/build/fonts/Involve-RegularOblique.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Involve';
+    src: url('/build/fonts/Involve-SemiBold.woff2') format('woff2'),
+         url('/build/fonts/Involve-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Involve';
+    src: url('/build/fonts/Involve-SemiBoldOblique.woff2') format('woff2'),
+         url('/build/fonts/Involve-SemiBoldOblique.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Involve';
+    src: url('/build/fonts/Involve-Bold.woff2') format('woff2'),
+         url('/build/fonts/Involve-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Involve';
+    src: url('/build/fonts/Involve-BoldOblique.woff2') format('woff2'),
+         url('/build/fonts/Involve-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Evolventa';
+    src: url('/build/fonts/Evolventa-Regular.woff2') format('woff2'),
+         url('/build/fonts/Evolventa-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Evolventa';
+    src: url('/build/fonts/Evolventa-Oblique.woff2') format('woff2'),
+         url('/build/fonts/Evolventa-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Evolventa';
+    src: url('/build/fonts/Evolventa-Bold.woff2') format('woff2'),
+         url('/build/fonts/Evolventa-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Evolventa';
+    src: url('/build/fonts/Evolventa-BoldOblique.woff2') format('woff2'),
+         url('/build/fonts/Evolventa-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  // Миксин для шрифтов Evolventa
+
+
+  
+  
+  // Вызов миксинов
+//   @include involve-fonts();
+//   @include evolventa-fonts();
+  

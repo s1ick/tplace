@@ -1,0 +1,74 @@
+@use './colors' as c;
+@use './fonts.scss';
+@use './inputs';
+.modal {
+     display: none;  
+    //display: flex;
+}
+.modal-content {
+    padding: 30px 60px 60px 60px;
+    border: 3px solid c.$gray;
+    border-radius: 24px;
+    width: 688px;
+    height: 768px;
+    background: c.$dark-gray;
+    justify-content: flex-start; 
+    align-items: center; 
+    flex-direction: column;  
+    align-content: center;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+   
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    left: 50%;
+    top: 50%;
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        cursor: pointer;
+    }
+    .modal.active {
+        display: block;
+      }
+ 
+    &__title {
+        margin-bottom: 12px;
+        /* subheading */
+        color: c.$white;
+        font-family: 'Involve';
+        font-size: 44px;
+        font-weight: 400;
+        line-height: 110%;
+        margin-top: 30px;
+    }
+    &__subtitle {
+        margin-bottom: 30px;
+        color: c.$white;
+        font-family: 'Envolenta';
+        font-weight: 400;
+        line-height: 110%;
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    &__input {
+          margin-bottom: 16px;  
+          width: 100%;
+    }
+    &__button {
+        width: 100%;
+    }
+
+}
+
+.modal-blur {
+    content: '';
+    backdrop-filter: blur(18px);
+    background: rgba(c.$black, 0.3);
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}

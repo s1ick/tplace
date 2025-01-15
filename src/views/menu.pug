@@ -1,10 +1,14 @@
-nav
-  ul
-    li
-      a(href="#home") Главная
-    li
-      a(href="#about") О нас
-    li
-      a(href="#services") Услуги
-    li
-      a(href="#contact") Контакты
+include ../ui/button
+header.header
+  .header__logo.header-logo
+    .header-logo__icon
+    .header-logo__text AI
+  .header__rs
+    ul.header__list.header-list
+      li.header-list__item
+        a(href="#").header-list-item__link Главная
+      li.header-list__item.header-list-item
+        a(href="#").header-list-item__link Преимущества
+    +button('button button--primary', 'Личный кабинет')
+    
+    

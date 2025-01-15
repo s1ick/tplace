@@ -1,0 +1,11 @@
+include ../ui/button
+
+.modal
+  .modal-blur
+  .modal-content.js-modal
+    img.modal-content__close.js-close-modal(src="/icons/close.svg", alt="close")
+    .modal-content__title Овладей нейросетями!
+    .modal-content__subtitle Получи в подарок доступ ко всем курсам
+    img.modal-content__present(src="/images/dialog.png", alt="dialog")
+    input.input.modal-content__input(type="text" placeholder="Введите e-mail" )
+    +button('button button--primary modal-content__button', 'Личный кабинет')

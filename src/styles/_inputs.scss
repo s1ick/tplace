@@ -1,0 +1,27 @@
+@use './colors' as c;
+@use './fonts.scss';
+.input {
+    border-radius: 18px;
+    background: c.$gray;    
+    color: #fff;
+    font-family: 'Evolventa';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 110%;
+    border: 1px solid c.$gray;
+    padding: 17px 24px;
+    text-align: center;
+
+    &:active {
+        box-sizing: border-box;
+        border: 1px solid c.$aquamarine;
+        background: rgb(27, 26, 44);
+    }
+    &:invalid {
+        box-sizing: border-box;
+        border: 1px solid c.$pink-light;
+        background: c.$gray;
+      }
+      
+
+}

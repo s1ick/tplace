@@ -1,4 +1,89 @@
 // Общие стили
-@import 'menu';
-@import 'main-content';
-@import 'advantages';
+@use './_menu.scss';
+@use './_colors.scss' as c; 
+@use './_dialog.scss'; 
+@use './_main-content.scss';
+@use './_advantages.scss';
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  background: rgb(12, 13, 18);
+  background-color: black;
+}
+
+.layout {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.button {
+  border-radius: 18px;
+  padding: 18px 24px;
+  font-family: "Evolventa";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 110%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &--primary {
+    background-color: c.$pink-vibrank; // Используем префикс 'c'
+    color: c.$white;
+    border: 1px solid c.$pink-vibrank;
+    padding: 16px 22px 16px 22px;
+    line-height: 19px;
+    &:hover {
+      box-shadow: 0px 0px 30px 2px rgb(247, 6, 163);
+      background: c.$white;
+      color: c.$black;
+    }
+
+    &:active {
+      box-shadow: none;
+      background: c.$white;
+      color: c.$black;
+    }
+
+    &:disabled {
+      background: c.$white;
+      opacity: 0.3;
+      color: c.$black;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: c.$white;
+    border: 1px solid c.$pink-light;
+
+    &:hover {
+      background: c.$pink-light;
+      color: c.$black;
+    }
+
+     &:active {
+      box-shadow: none;
+      background: c.$pink-vibrank;
+      color: c.$black;
+      border: 1px solid transparent;
+    }
+
+    &:disabled {
+      background: c.$pink-vibrank;
+      opacity: 0.3;
+      color: c.$black;
+    }
+  }
+}

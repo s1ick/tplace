@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Modern CSS Reset Tweaks
  * ==================================================
@@ -601,6 +602,424 @@ summary {
    ========================================================================== */
 template {
   display: none;
+}
+
+@font-face {
+  font-family: "Involve";
+  src: url("/build/fonts/Evolventa-Regular.woff2") format("woff2"), url("/build/fonts/Involve-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Involve";
+  src: url("/build/fonts/Involve-RegularOblique.woff2") format("woff2"), url("/build/fonts/Involve-RegularOblique.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Involve";
+  src: url("/build/fonts/Involve-SemiBold.woff2") format("woff2"), url("/build/fonts/Involve-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Involve";
+  src: url("/build/fonts/Involve-SemiBoldOblique.woff2") format("woff2"), url("/build/fonts/Involve-SemiBoldOblique.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Involve";
+  src: url("/build/fonts/Involve-Bold.woff2") format("woff2"), url("/build/fonts/Involve-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Involve";
+  src: url("/build/fonts/Involve-BoldOblique.woff2") format("woff2"), url("/build/fonts/Involve-BoldOblique.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Evolventa";
+  src: url("/build/fonts/Evolventa-Regular.woff2") format("woff2"), url("/build/fonts/Evolventa-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Evolventa";
+  src: url("/build/fonts/Evolventa-Oblique.woff2") format("woff2"), url("/build/fonts/Evolventa-Oblique.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Evolventa";
+  src: url("/build/fonts/Evolventa-Bold.woff2") format("woff2"), url("/build/fonts/Evolventa-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Evolventa";
+  src: url("/build/fonts/Evolventa-BoldOblique.woff2") format("woff2"), url("/build/fonts/Evolventa-BoldOblique.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+.header {
+  height: 99px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__list {
+  margin-right: 150px;
+}
+.header__rs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-list__item {
+  margin-right: 105px;
+}
+.header-list__item:last-child {
+  margin-right: 0;
+}
+
+.header-list-item__link {
+  color: #fff;
+  font-family: "Evolventa";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 110%;
+  opacity: 0.6;
+  text-decoration: none;
+}
+.header-list-item__link:hover {
+  color: #F706A3;
+}
+.header-list-item__link:active {
+  color: #CA0078;
+}
+.header-list-item__link:disabled {
+  color: #CA0078;
+  opacity: 0.3;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-logo__icon {
+  box-shadow: inset -12px -17px 17.1px 0px rgba(13, 12, 18, 0.3), inset 3px 4px 10.3px 0px rgba(255, 255, 255, 0.25);
+  background: radial-gradient(95.34% 95.34% at 40% 21%, rgb(247, 6, 163), rgb(90, 115, 239) 100%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.header-logo__text {
+  /* subheading */
+  color: #fff;
+  font-family: "Involve";
+  font-size: 44px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.input {
+  border-radius: 18px;
+  background: #1B1A2C;
+  color: #fff;
+  font-family: "Evolventa";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 110%;
+  border: 1px solid #1B1A2C;
+  padding: 17px 24px;
+  text-align: center;
+}
+.input:active {
+  box-sizing: border-box;
+  border: 1px solid #81F3F8;
+  background: rgb(27, 26, 44);
+}
+.input:invalid {
+  box-sizing: border-box;
+  border: 1px solid #F706A3;
+  background: #1B1A2C;
+}
+
+.modal {
+  display: none;
+}
+
+.modal-content {
+  padding: 30px 60px 60px 60px;
+  border: 3px solid #1B1A2C;
+  border-radius: 24px;
+  width: 688px;
+  height: 768px;
+  background: #161524;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  left: 50%;
+  top: 50%;
+}
+.modal-content__close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  cursor: pointer;
+}
+.modal-content .modal.active {
+  display: block;
+}
+.modal-content__title {
+  margin-bottom: 12px;
+  /* subheading */
+  color: #FFFFFF;
+  font-family: "Involve";
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 110%;
+  margin-top: 30px;
+}
+.modal-content__subtitle {
+  margin-bottom: 30px;
+  color: #FFFFFF;
+  font-family: "Envolenta";
+  font-weight: 400;
+  line-height: 110%;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.modal-content__input {
+  margin-bottom: 16px;
+  width: 100%;
+}
+.modal-content__button {
+  width: 100%;
+}
+
+.modal-blur {
+  content: "";
+  backdrop-filter: blur(18px);
+  background: rgba(12, 13, 18, 0.3);
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+section.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+section.main-content__rs {
+  margin-right: 21px;
+}
+
+.main-content-ls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  font-family: "Involve";
+}
+.main-content-ls__title-h1 {
+  background: linear-gradient(90deg, rgb(247, 6, 163), rgb(90, 115, 239), rgb(129, 243, 248));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-family: "Involve";
+  font-size: 120px;
+  font-weight: 500;
+  line-height: 90%;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+.main-content-ls__title-h2 {
+  color: rgb(255, 255, 255);
+  font-family: "Involve";
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 90%;
+  letter-spacing: 0.02em;
+  margin-bottom: 30px;
+}
+.main-content-ls__subtitle {
+  color: rgb(255, 255, 255);
+  font-family: "Evolventa";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 110%;
+  margin-bottom: 72px;
+}
+
+section.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 20px;
+  gap: 30px 30px;
+  justify-content: center;
+}
+section.advantages ul {
+  list-style-type: disc;
+}
+section.advantages::after {
+  top: 89px;
+  content: "Преимущества";
+  color: rgb(0, 0, 0);
+  font-family: "Involve";
+  font-size: 213px;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: 2%;
+  text-align: center;
+  opacity: 0.1;
+  position: absolute;
+  text-shadow: 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF;
+}
+
+.widget {
+  max-width: 450px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgb(22, 21, 36);
+  text-align: left;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
+}
+.widget__title {
+  font-size: 24px;
+  line-height: 110%;
+  font-family: "Evolventa";
+  font-weight: 400;
+  line-height: 110%;
+  margin-bottom: 24px;
+}
+.widget__text {
+  font-family: "Evolventa";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16;
+  line-height: 110%;
+}
+.widget__image {
+  margin-bottom: 24px;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  background: rgb(12, 13, 18);
+  background-color: black;
+}
+
+.layout {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.button {
+  border-radius: 18px;
+  padding: 18px 24px;
+  font-family: "Evolventa";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 110%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button--primary {
+  background-color: #CA0078;
+  color: #FFFFFF;
+  border: 1px solid #CA0078;
+  padding: 16px 22px 16px 22px;
+  line-height: 19px;
+}
+.button--primary:hover {
+  box-shadow: 0px 0px 30px 2px rgb(247, 6, 163);
+  background: #FFFFFF;
+  color: #0C0D12;
+}
+.button--primary:active {
+  box-shadow: none;
+  background: #FFFFFF;
+  color: #0C0D12;
+}
+.button--primary:disabled {
+  background: #FFFFFF;
+  opacity: 0.3;
+  color: #0C0D12;
+}
+.button--secondary {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid #F706A3;
+}
+.button--secondary:hover {
+  background: #F706A3;
+  color: #0C0D12;
+}
+.button--secondary:active {
+  box-shadow: none;
+  background: #CA0078;
+  color: #0C0D12;
+  border: 1px solid transparent;
+}
+.button--secondary:disabled {
+  background: #CA0078;
+  opacity: 0.3;
+  color: #0C0D12;
 }
 
 html {

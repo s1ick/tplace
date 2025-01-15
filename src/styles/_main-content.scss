@@ -1,5 +1,60 @@
+@use './fonts.scss';
+
 section.main-content {
-    padding: 20px;
-    background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+
+  &__rs {
+    margin-right: 21px;
   }
-  
+}
+
+.main-content-ls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: flex-start; 
+  flex: 1;
+  font-family: 'Involve';
+
+  &__title-h1 {
+    background: linear-gradient(
+      90deg,
+      rgb(247, 6, 163),
+      rgb(90, 115, 239),
+      rgb(129, 243, 248)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: 'Involve';
+    font-size: 120px;
+    font-weight: 500;
+    line-height: 90%;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+  }
+
+  &__title-h2 {
+    color: rgb(255, 255, 255);
+    font-family: 'Involve';
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 90%;
+    letter-spacing: 0.02em;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    color: rgb(255, 255, 255);
+    font-family: 'Evolventa';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 110%;
+    margin-bottom: 72px;
+
+  }
+}

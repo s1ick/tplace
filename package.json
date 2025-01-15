@@ -3,21 +3,22 @@
   "version": "1.0.0",
   "description": "rollup Template",
   "main": "index.js",
+  "type":"module",
   "scripts": {
+    "dev": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx rollup --config",
-    "start": "npx rollup --config --watch"
+    "build": "npx rollup --config rollup.config.js",
+    "start": "npx rollup --config rollup.config.js --watch"
   },
   "author": "Matveev Ivan",
-  "type": "module",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
-    "css-loader": "^7.1.2",
-    "fs": "^0.0.1-security",
     "rollup": "^3.2.3",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-html": "^0.2.1",
     "rollup-plugin-pug": "^1.1.1",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-serve": "^2.0.1",
@@ -30,6 +31,7 @@
   },
   "dependencies": {
     "rollup-plugin-live-server": "^2.0.0",
+    "rollup-plugin-livereload": "^2.0.5",
     "scss-reset": "^1.2.2"
   },
   "repository": {

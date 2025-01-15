@@ -1,4 +1,5 @@
 @use '../node_modules/scss-reset/src/scss/_reset.scss' as *;
+@use '../src/styles/main.scss';
 
 html {
     -webkit-box-sizing: border-box;

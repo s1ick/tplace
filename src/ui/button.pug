@@ -1,2 +1,3 @@
-button(class=buttonClass)
-  | #{buttonText}
+mixin button(buttonClass, buttonText)
+  button(class=buttonClass) 
+    | #{buttonText}
