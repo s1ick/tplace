@@ -1,23 +1,27 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.querySelector('.js-modal');
+  const header = document.querySelector('.header');
+  const burgerIcon = document.querySelector('.header__burger-icon');
+  const closeButton = document.querySelector('.closebtn');
+  
+  const toggleClass = (element, className, action) => {
+    element.classList[action](className);
+  };
 
-document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.querySelector('.js-modal'); // Модальное окно
-    const openModalButton = document.querySelector('.js-open-modal'); // Кнопка открытия
-    const closeModalButton = document.querySelector('.js-close-modal'); // Кнопка закрытия
-  
-    // Открытие модального окна при клике на кнопку
-    openModalButton.addEventListener('click', function() {
-      modal.classList.add('active'); // Добавляем класс 'active', чтобы показать окно
-    });
-  
-    // Закрытие модального окна при клике на кнопку закрытия
-    closeModalButton.addEventListener('click', function() {
-      modal.classList.remove('active'); // Убираем класс 'active', чтобы скрыть окно
-    });
-  
-    // Закрытие модального окна при клике на область вне окна
-    window.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        modal.classList.remove('active'); // Закрываем окно, если кликнули за пределы
-      }
-    });
+  document.addEventListener('click', (e) => {
+    if (e.target.matches('.js-open-modal')) toggleClass(modal, 'active', 'add');
+    if (e.target.matches('.js-close-modal') || e.target === modal) toggleClass(modal, 'active', 'remove');
+    
+    if (e.target.matches('.header__burger-icon')) {
+      toggleClass(header, 'active-mobile', 'add');
+      burgerIcon.style.display = 'none';  // Прячем бургер-иконку
+      closeButton.style.display = 'block';  // Показываем кнопку закрытия
+    }
+
+    if (e.target.matches('.closebtn')) {
+      toggleClass(header, 'active-mobile', 'remove');
+      burgerIcon.style.display = 'block';  // Показываем бургер-иконку
+      closeButton.style.display = 'none';  // Прячем кнопку закрытия
+    }
   });
+});

@@ -1,23 +1,37 @@
-@use './fonts.scss';
-
-section.main-content {
+@use './fonts.scss' as f;
+@use './mixins' as m;
+@use './buttons';
+.main-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
-
+  flex-wrap: wrap;  
+  @include m.mobile {
+    padding: 0 3rem;
+    justify-content: center;
+    margin-bottom: 3.8rem;
+    
+  }
   &__rs {
-    margin-right: 21px;
+    margin-right: 2.1rem;
+    max-width: 62rem;
+    display: inline-flex;
+    @include m.mobile {
+      order: -1;
+   
+      
+    }
   }
 }
 
 .main-content-ls {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center; 
   align-items: flex-start; 
-  flex: 1;
-  font-family: 'Involve';
+  font-family: "Involve";
+  z-index: 1;
 
   &__title-h1 {
     background: linear-gradient(
@@ -30,31 +44,38 @@ section.main-content {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    font-family: 'Involve';
-    font-size: 120px;
+    font-family: "Involve";    
     font-weight: 500;
     line-height: 90%;
     letter-spacing: 0.02em;
-    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
+    @include m.text-size(f.$h1-title, f.$h1-title-mobile);
+
   }
 
   &__title-h2 {
     color: rgb(255, 255, 255);
-    font-family: 'Involve';
-    font-size: 80px;
+    font-family: "Involve";
     font-weight: 500;
     line-height: 90%;
     letter-spacing: 0.02em;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
+    @include m.text-size(f.$h2-title, f.$h2-title-mobile);
+
+
   }
 
   &__subtitle {
     color: rgb(255, 255, 255);
-    font-family: 'Evolventa';
-    font-size: 24px;
+    font-family: "Evolventa";    
     font-weight: 400;
     line-height: 110%;
-    margin-bottom: 72px;
-
+    margin-bottom: 7.2rem;
+    @include m.text-size(f.$body-large, f.$body-large-mobile);
+    @include m.mobile {
+      margin-bottom: 3rem;
+      
+    }
   }
 }
+

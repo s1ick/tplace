@@ -1,66 +1,116 @@
-@use './fonts.scss';
-section.advantages {
+@use "./fonts" as f;
+@use "./colors" as c;
+@use "./mixins" as m;
+.advantages {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-    padding: 20px;
-    gap: 30px 30px;
-    justify-content: center;
-    ul {
-      list-style-type: disc;
+  padding: 2rem;
+  gap: 3rem;
+  justify-content: center;
+
+  &::after {
+    top: -16.1rem;
+    content: "Преимущества";
+    color: rgb(0, 0, 0);
+    font-family: "Involve";
+    font-size: 21.3rem;
+    font-weight: 700;
+    line-height: 90%;
+    letter-spacing: 2%;
+    text-align: center;
+    opacity: 0.1;
+    position: absolute;
+    text-shadow:
+      0.1px 1px 0 #ffffff,
+      -1px -1px 0 #ffffff,
+      1px -1px 0 #ffffff,
+      -1px 1px 0 #ffffff;
+    @include m.mobile {
+      font-size: 4.8rem;
+      top: -17.8rem;
     }
-    &::after {
-      top: 89px;
-      content: 'Преимущества';
-      color: rgb(0, 0, 0);
-      font-family: 'Involve';
-      font-size: 213px;
-      font-weight: 700;
-      line-height: 90%;
-      letter-spacing: 2%;
-      text-align: center;
-      opacity: 0.1;
-      position: absolute;
-      text-shadow: 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF;
-    }
-    
   }
-  
+  @include m.mobile {
+    gap: 1.5rem;
+  }
+}
 
+.widget {
+  max-width: 45rem;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1.8rem;
+  background: rgb(22, 21, 36);
+  text-align: left;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
 
-  .widget {
-    max-width: 450px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 18px;
-    background: rgb(22, 21, 36);
-    text-align: left;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    color: rgb(255, 255, 255);
-    position: relative;
-    z-index: 1;
-    &__title {
-      font-size: 24px;
-      line-height: 110%;
-      font-family: 'Evolventa';  
+  @include m.mobile {
+    padding: 2.4rem;
+    max-width: 30rem;
+  }
+  &__title {    
+    line-height: 110%;
+    font-family: "Evolventa";
     font-weight: 400;
-    line-height: 110%; 
-    margin-bottom: 24px;
-    }
-    &__text {
-      
-      font-family: 'Evolventa';
-      font-weight: 400;
-      font-style: normal;
-      font-size: 16;
-      line-height: 110%;
-
-    }
-    &__image {
-      margin-bottom: 24px;
+    line-height: 110%;
+    margin-bottom: 2.4rem;
+    @include m.text-size(f.$body-large, f.$body-large-mobile);
+    @include m.mobile {
+      margin-bottom: 1.8rem;
     }
   }
+  &__text {
+    font-family: "Evolventa";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 110%;
+    @include m.text-size(f.$widget-text, f.$widget-text-mobile);
+
+  }
+  &__image {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.text-subscription {
+  margin: 0 auto 9.8rem;
+  color: c.$white;
+  max-width: 92.6rem;
+
+  @include m.mobile {
+    padding: 0 1.5rem;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 1.7rem;
+    font-family: "Involve";
+    font-weight: 500;
+    text-align: center;
+    @include m.text-size(f.$h2-title, f.$h2-title-mobile);
+    @include m.mobile {
+      margin-bottom: 0;
+    }
+  }
+  &__content {
+    /* body large */
+    font-family: "Evolventa";
+    font-weight: 400;
+    line-height: 110%;
+    text-align: center;
+    @include m.text-size(f.$body-large, f.$body-large-mobile);
+    @include m.mobile {
+      margin-top: 1.2rem;
+    }
+    &--color {
+      color: c.$pink-light;
+    }
+  }
+}

@@ -606,388 +606,101 @@ template {
 
 @font-face {
   font-family: "Involve";
-  src: url("/build/fonts/Evolventa-Regular.woff2") format("woff2"), url("/build/fonts/Involve-Regular.woff") format("woff");
+  src: url("./fonts/Evolventa-Regular.woff2") format("woff2"), url("./fonts/Involve-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Involve";
-  src: url("/build/fonts/Involve-RegularOblique.woff2") format("woff2"), url("/build/fonts/Involve-RegularOblique.woff") format("woff");
+  src: url("./fonts/Involve-RegularOblique.woff2") format("woff2"), url("./fonts/Involve-RegularOblique.woff") format("woff");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Involve";
-  src: url("/build/fonts/Involve-SemiBold.woff2") format("woff2"), url("/build/fonts/Involve-SemiBold.woff") format("woff");
+  src: url("./fonts/Involve-SemiBold.woff2") format("woff2"), url("./fonts/Involve-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Involve";
-  src: url("/build/fonts/Involve-SemiBoldOblique.woff2") format("woff2"), url("/build/fonts/Involve-SemiBoldOblique.woff") format("woff");
+  src: url("./fonts/Involve-SemiBoldOblique.woff2") format("woff2"), url("./fonts/Involve-SemiBoldOblique.woff") format("woff");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Involve";
-  src: url("/build/fonts/Involve-Bold.woff2") format("woff2"), url("/build/fonts/Involve-Bold.woff") format("woff");
+  src: url("./fonts/Involve-Bold.woff2") format("woff2"), url("./fonts/Involve-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Involve";
-  src: url("/build/fonts/Involve-BoldOblique.woff2") format("woff2"), url("/build/fonts/Involve-BoldOblique.woff") format("woff");
+  src: url("./fonts/Involve-BoldOblique.woff2") format("woff2"), url("./fonts/Involve-BoldOblique.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Evolventa";
-  src: url("/build/fonts/Evolventa-Regular.woff2") format("woff2"), url("/build/fonts/Evolventa-Regular.woff") format("woff");
+  src: url("./fonts/Evolventa-Regular.woff2") format("woff2"), url("./fonts/Evolventa-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Evolventa";
-  src: url("/build/fonts/Evolventa-Oblique.woff2") format("woff2"), url("/build/fonts/Evolventa-Oblique.woff") format("woff");
+  src: url("./fonts/Evolventa-Oblique.woff2") format("woff2"), url("./fonts/Evolventa-Oblique.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Evolventa";
-  src: url("/build/fonts/Evolventa-Bold.woff2") format("woff2"), url("/build/fonts/Evolventa-Bold.woff") format("woff");
+  src: url("./fonts/Evolventa-Bold.woff2") format("woff2"), url("./fonts/Evolventa-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Evolventa";
-  src: url("/build/fonts/Evolventa-BoldOblique.woff2") format("woff2"), url("/build/fonts/Evolventa-BoldOblique.woff") format("woff");
+  src: url("./fonts/Evolventa-BoldOblique.woff2") format("woff2"), url("./fonts/Evolventa-BoldOblique.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
 }
-.header {
-  height: 99px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__list {
-  margin-right: 150px;
-}
-.header__rs {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.header-list {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.header-list__item {
-  margin-right: 105px;
-}
-.header-list__item:last-child {
-  margin-right: 0;
-}
-
-.header-list-item__link {
-  color: #fff;
-  font-family: "Evolventa";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 110%;
-  opacity: 0.6;
-  text-decoration: none;
-}
-.header-list-item__link:hover {
-  color: #F706A3;
-}
-.header-list-item__link:active {
-  color: #CA0078;
-}
-.header-list-item__link:disabled {
-  color: #CA0078;
-  opacity: 0.3;
-}
-
-.header-logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.header-logo__icon {
-  box-shadow: inset -12px -17px 17.1px 0px rgba(13, 12, 18, 0.3), inset 3px 4px 10.3px 0px rgba(255, 255, 255, 0.25);
-  background: radial-gradient(95.34% 95.34% at 40% 21%, rgb(247, 6, 163), rgb(90, 115, 239) 100%);
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  margin-right: 6px;
-}
-.header-logo__text {
-  /* subheading */
-  color: #fff;
-  font-family: "Involve";
-  font-size: 44px;
-  font-weight: 400;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.input {
-  border-radius: 18px;
-  background: #1B1A2C;
-  color: #fff;
-  font-family: "Evolventa";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 110%;
-  border: 1px solid #1B1A2C;
-  padding: 17px 24px;
-  text-align: center;
-}
-.input:active {
-  box-sizing: border-box;
-  border: 1px solid #81F3F8;
-  background: rgb(27, 26, 44);
-}
-.input:invalid {
-  box-sizing: border-box;
-  border: 1px solid #F706A3;
-  background: #1B1A2C;
-}
-
-.modal {
-  display: none;
-}
-
-.modal-content {
-  padding: 30px 60px 60px 60px;
-  border: 3px solid #1B1A2C;
-  border-radius: 24px;
-  width: 688px;
-  height: 768px;
-  background: #161524;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
-  position: fixed;
-  z-index: 2;
-  display: flex;
-  transform: translate(-50%, -50%);
-  z-index: 11;
-  left: 50%;
-  top: 50%;
-}
-.modal-content__close {
-  position: absolute;
-  top: 30px;
-  right: 50px;
-  cursor: pointer;
-}
-.modal-content .modal.active {
-  display: block;
-}
-.modal-content__title {
-  margin-bottom: 12px;
-  /* subheading */
-  color: #FFFFFF;
-  font-family: "Involve";
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 110%;
-  margin-top: 30px;
-}
-.modal-content__subtitle {
-  margin-bottom: 30px;
-  color: #FFFFFF;
-  font-family: "Envolenta";
-  font-weight: 400;
-  line-height: 110%;
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-.modal-content__input {
-  margin-bottom: 16px;
-  width: 100%;
-}
-.modal-content__button {
-  width: 100%;
-}
-
-.modal-blur {
-  content: "";
-  backdrop-filter: blur(18px);
-  background: rgba(12, 13, 18, 0.3);
-  z-index: 10;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-}
-
-section.main-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-}
-section.main-content__rs {
-  margin-right: 21px;
-}
-
-.main-content-ls {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex: 1;
-  font-family: "Involve";
-}
-.main-content-ls__title-h1 {
-  background: linear-gradient(90deg, rgb(247, 6, 163), rgb(90, 115, 239), rgb(129, 243, 248));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  font-family: "Involve";
-  font-size: 120px;
-  font-weight: 500;
-  line-height: 90%;
-  letter-spacing: 0.02em;
-  margin-bottom: 6px;
-}
-.main-content-ls__title-h2 {
-  color: rgb(255, 255, 255);
-  font-family: "Involve";
-  font-size: 80px;
-  font-weight: 500;
-  line-height: 90%;
-  letter-spacing: 0.02em;
-  margin-bottom: 30px;
-}
-.main-content-ls__subtitle {
-  color: rgb(255, 255, 255);
-  font-family: "Evolventa";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 110%;
-  margin-bottom: 72px;
-}
-
-section.advantages {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  padding: 20px;
-  gap: 30px 30px;
-  justify-content: center;
-}
-section.advantages ul {
-  list-style-type: disc;
-}
-section.advantages::after {
-  top: 89px;
-  content: "Преимущества";
-  color: rgb(0, 0, 0);
-  font-family: "Involve";
-  font-size: 213px;
-  font-weight: 700;
-  line-height: 90%;
-  letter-spacing: 2%;
-  text-align: center;
-  opacity: 0.1;
-  position: absolute;
-  text-shadow: 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF;
-}
-
-.widget {
-  max-width: 450px;
-  width: 100%;
-  padding: 20px;
-  border-radius: 18px;
-  background: rgb(22, 21, 36);
-  text-align: left;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  color: rgb(255, 255, 255);
-  position: relative;
-  z-index: 1;
-}
-.widget__title {
-  font-size: 24px;
-  line-height: 110%;
-  font-family: "Evolventa";
-  font-weight: 400;
-  line-height: 110%;
-  margin-bottom: 24px;
-}
-.widget__text {
-  font-family: "Evolventa";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16;
-  line-height: 110%;
-}
-.widget__image {
-  margin-bottom: 24px;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-body {
-  background: rgb(12, 13, 18);
-  background-color: black;
-}
-
-.layout {
-  width: 1400px;
-  margin: 0 auto;
-}
-
 .button {
-  border-radius: 18px;
-  padding: 18px 24px;
+  border-radius: 1.8rem;
+  padding: 1.8rem 2.4rem;
   font-family: "Evolventa";
-  font-size: 24px;
   font-weight: 400;
   line-height: 110%;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 2.4rem;
 }
 .button--primary {
   background-color: #CA0078;
   color: #FFFFFF;
   border: 1px solid #CA0078;
-  padding: 16px 22px 16px 22px;
-  line-height: 19px;
+  padding: 1.6rem 2.2rem;
+  line-height: 1.9rem;
+  font-size: 2.4rem;
+}
+@media (max-width: 1300px) {
+  .button--primary {
+    font-size: 1.6rem;
+  }
 }
 .button--primary:hover {
-  box-shadow: 0px 0px 30px 2px rgb(247, 6, 163);
+  box-shadow: 0px 0px 3rem 0.2rem rgb(247, 6, 163);
   background: #FFFFFF;
   color: #0C0D12;
 }
@@ -1020,6 +733,568 @@ body {
   background: #CA0078;
   opacity: 0.3;
   color: #0C0D12;
+}
+
+.header {
+  height: 9.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.header:after {
+  position: fixed;
+  z-index: 1;
+  content: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(9px);
+  background: rgba(12, 13, 18, 0.3);
+}
+.header.active-mobile {
+  background-color: #0C0D12;
+  z-index: 123;
+  height: auto;
+}
+.header.active-mobile:after {
+  content: "";
+  z-index: -1;
+}
+.header.active-mobile .header__rs {
+  display: flex;
+}
+@media (max-width: 1300px) {
+  .header {
+    padding: 0 15px;
+    height: 5.7rem;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+}
+.header__list {
+  margin-right: 15rem;
+}
+@media (max-width: 1300px) {
+  .header__list {
+    margin-right: 0;
+  }
+}
+.header__rs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 1300px) {
+  .header__rs {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0px 0px 30px 0px;
+    position: relative;
+    z-index: 12;
+  }
+}
+.header__burger-icon {
+  display: none;
+  cursor: pointer;
+  z-index: 333;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+@media (max-width: 1300px) {
+  .header__burger-icon {
+    display: block;
+  }
+}
+.header .closebtn {
+  cursor: pointer;
+  display: none;
+  max-width: 2.2rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  z-index: 40;
+}
+
+.header-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (max-width: 1300px) {
+  .header-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+  }
+}
+.header-list__item {
+  margin-right: 10.5rem;
+}
+@media (max-width: 1300px) {
+  .header-list__item {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+.header-list__item:last-child {
+  margin-right: 0;
+}
+
+.header-list-item__link {
+  color: #fff;
+  font-family: "Evolventa";
+  font-weight: 400;
+  line-height: 110%;
+  opacity: 0.6;
+  text-decoration: none;
+  font-size: 2.4rem;
+}
+@media (max-width: 1300px) {
+  .header-list-item__link {
+    font-size: 1.6rem;
+  }
+}
+.header-list-item__link:hover {
+  color: #F706A3;
+}
+.header-list-item__link:active {
+  color: #CA0078;
+}
+.header-list-item__link:disabled {
+  color: #CA0078;
+  opacity: 0.3;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 1300px) {
+  .header-logo {
+    width: 100%;
+    padding-top: 1.2rem;
+    z-index: 12;
+  }
+}
+.header-logo__icon {
+  box-shadow: inset -12px -17px 17.1px 0px rgba(13, 12, 18, 0.3), inset 3px 4px 10.3px 0px rgba(255, 255, 255, 0.25);
+  background: radial-gradient(95.34% 95.34% at 40% 21%, rgb(247, 6, 163), rgb(90, 115, 239) 100%);
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+}
+.header-logo__text {
+  /* subheading */
+  color: #fff;
+  font-family: "Involve";
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 4.4rem;
+}
+@media (max-width: 1300px) {
+  .header-logo__text {
+    font-size: 3rem;
+  }
+}
+
+.input {
+  border-radius: 1.8rem;
+  background: #1B1A2C;
+  color: #fff;
+  font-family: "Evolventa";
+  font-weight: 400;
+  line-height: 110%;
+  border: 1px solid #1B1A2C;
+  padding: 1.7rem 2.4rem;
+  text-align: center;
+  font-size: 2.4rem;
+}
+@media (max-width: 1300px) {
+  .input {
+    font-size: 1.6rem;
+  }
+}
+.input:active {
+  box-sizing: border-box;
+  border: 1px solid #81F3F8;
+  background: rgb(27, 26, 44);
+}
+.input:invalid {
+  box-sizing: border-box;
+  border: 1px solid #F706A3;
+  background: #1B1A2C;
+}
+
+.modal {
+  display: none;
+}
+.modal.active {
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.js-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.js-modal.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0s 0s;
+}
+
+.modal-blur {
+  content: "";
+  backdrop-filter: blur(1.8rem);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.modal-content {
+  padding: 3rem 6rem 6rem 6rem;
+  border: 3px solid #1B1A2C;
+  border-radius: 2.4rem;
+  max-width: 68.8rem;
+  max-height: 76.8rem;
+  width: 100%;
+  height: auto;
+  background: #161524;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+@media (max-width: 1300px) {
+  .modal-content {
+    max-width: 28rem;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+}
+.modal-content__close {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  cursor: pointer;
+}
+@media (max-width: 1300px) {
+  .modal-content__close {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+.modal-content__title, .modal-content__subtitle {
+  color: #FFFFFF;
+  font-family: "Involve";
+  font-weight: 400;
+  line-height: 110%;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.modal-content__title {
+  font-family: "Involve";
+  font-size: 4.4rem;
+}
+@media (max-width: 1300px) {
+  .modal-content__title {
+    font-size: 3rem;
+  }
+}
+.modal-content__subtitle {
+  font-family: "Envolenta";
+  font-size: 2.4rem;
+}
+@media (max-width: 1300px) {
+  .modal-content__subtitle {
+    font-size: 1.6rem;
+  }
+}
+.modal-content__input {
+  margin-bottom: 1.6rem;
+  width: 100%;
+}
+.modal-content__button {
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+}
+@media (max-width: 1300px) {
+  .main-content {
+    padding: 0 3rem;
+    justify-content: center;
+    margin-bottom: 3.8rem;
+  }
+}
+.main-content__rs {
+  margin-right: 2.1rem;
+  max-width: 62rem;
+  display: inline-flex;
+}
+@media (max-width: 1300px) {
+  .main-content__rs {
+    order: -1;
+  }
+}
+
+.main-content-ls {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Involve";
+  z-index: 1;
+}
+.main-content-ls__title-h1 {
+  background: linear-gradient(90deg, rgb(247, 6, 163), rgb(90, 115, 239), rgb(129, 243, 248));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-family: "Involve";
+  font-weight: 500;
+  line-height: 90%;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.6rem;
+  font-size: 12rem;
+}
+@media (max-width: 1300px) {
+  .main-content-ls__title-h1 {
+    font-size: 5.2rem;
+  }
+}
+.main-content-ls__title-h2 {
+  color: rgb(255, 255, 255);
+  font-family: "Involve";
+  font-weight: 500;
+  line-height: 90%;
+  letter-spacing: 0.02em;
+  margin-bottom: 3rem;
+  font-size: 8rem;
+}
+@media (max-width: 1300px) {
+  .main-content-ls__title-h2 {
+    font-size: 3.6rem;
+  }
+}
+.main-content-ls__subtitle {
+  color: rgb(255, 255, 255);
+  font-family: "Evolventa";
+  font-weight: 400;
+  line-height: 110%;
+  margin-bottom: 7.2rem;
+  font-size: 2.4rem;
+}
+@media (max-width: 1300px) {
+  .main-content-ls__subtitle {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 1300px) {
+  .main-content-ls__subtitle {
+    margin-bottom: 3rem;
+  }
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 2rem;
+  gap: 3rem;
+  justify-content: center;
+}
+.advantages::after {
+  top: -16.1rem;
+  content: "Преимущества";
+  color: rgb(0, 0, 0);
+  font-family: "Involve";
+  font-size: 21.3rem;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: 2%;
+  text-align: center;
+  opacity: 0.1;
+  position: absolute;
+  text-shadow: 0.1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff;
+}
+@media (max-width: 1300px) {
+  .advantages::after {
+    font-size: 4.8rem;
+    top: -17.8rem;
+  }
+}
+@media (max-width: 1300px) {
+  .advantages {
+    gap: 1.5rem;
+  }
+}
+
+.widget {
+  max-width: 45rem;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1.8rem;
+  background: rgb(22, 21, 36);
+  text-align: left;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1300px) {
+  .widget {
+    padding: 2.4rem;
+    max-width: 30rem;
+  }
+}
+.widget__title {
+  line-height: 110%;
+  font-family: "Evolventa";
+  font-weight: 400;
+  line-height: 110%;
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
+}
+@media (max-width: 1300px) {
+  .widget__title {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 1300px) {
+  .widget__title {
+    margin-bottom: 1.8rem;
+  }
+}
+.widget__text {
+  font-family: "Evolventa";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 110%;
+  font-size: 1.6rem;
+}
+@media (max-width: 1300px) {
+  .widget__text {
+    font-size: 1.2rem;
+  }
+}
+.widget__image {
+  margin-bottom: 2.4rem;
+}
+
+.text-subscription {
+  margin: 0 auto 9.8rem;
+  color: #FFFFFF;
+  max-width: 92.6rem;
+}
+@media (max-width: 1300px) {
+  .text-subscription {
+    padding: 0 1.5rem;
+    margin: 0 auto;
+  }
+}
+.text-subscription__title {
+  margin-bottom: 1.7rem;
+  font-family: "Involve";
+  font-weight: 500;
+  text-align: center;
+  font-size: 8rem;
+}
+@media (max-width: 1300px) {
+  .text-subscription__title {
+    font-size: 3.6rem;
+  }
+}
+@media (max-width: 1300px) {
+  .text-subscription__title {
+    margin-bottom: 0;
+  }
+}
+.text-subscription__content {
+  /* body large */
+  font-family: "Evolventa";
+  font-weight: 400;
+  line-height: 110%;
+  text-align: center;
+  font-size: 2.4rem;
+}
+@media (max-width: 1300px) {
+  .text-subscription__content {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 1300px) {
+  .text-subscription__content {
+    margin-top: 1.2rem;
+  }
+}
+.text-subscription__content--color {
+  color: #F706A3;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  background: rgb(12, 13, 18);
+  background-color: black;
+}
+
+.layout {
+  max-width: 140rem;
+  margin: 0 auto;
 }
 
 html {

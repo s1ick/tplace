@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,20 @@
 
 </head>
 
-<body>   
-    <script src="./build/scripts/modal.js"></script>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.querySelector('.js-modal'); // Модальное окно
+            const openModalButton = document.querySelector('.js-open-modal'); // Кнопка открытия
+            const closeModalButton = document.querySelector('.js-close-modal'); // Кнопка закрытия
+            openModalButton.addEventListener('click', function () {
+                modal.classList.add('active'); // Добавляем класс 'active', чтобы показать окно
+            });
+            closeModalButton.addEventListener('click', function () {
+                modal.classList.remove('active'); // Убираем класс 'active', чтобы скрыть окно
+            });
+        });
+    </script>
 </body>
+
 </html>

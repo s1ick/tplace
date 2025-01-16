@@ -56,9 +56,9 @@ export default {
     copy({
       targets: [
         { src: 'src/icons/*', dest: './build/icons' },
+        { src: 'src/scripts/*', dest: './build/scripts' },
         { src: 'src/images/*', dest: './build/images' },
         { src: 'src/fonts/*', dest: './build/fonts' },
-        { src: 'src/scripts/*', dest: './build/scripts' },
       ],
     }),
     serve({

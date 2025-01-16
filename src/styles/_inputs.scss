@@ -1,16 +1,17 @@
 @use './colors' as c;
-@use './fonts.scss';
+@use './fonts' as f;
+@use "./mixins" as m;
 .input {
-    border-radius: 18px;
+    border-radius: 1.8rem;
     background: c.$gray;    
     color: #fff;
-    font-family: 'Evolventa';
-    font-size: 24px;
+    font-family: "Evolventa";
     font-weight: 400;
     line-height: 110%;
     border: 1px solid c.$gray;
-    padding: 17px 24px;
+    padding: 1.7rem 2.4rem;
     text-align: center;
+    @include m.text-size(f.$body-large, f.$body-large-mobile);
 
     &:active {
         box-sizing: border-box;

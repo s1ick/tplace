@@ -259,9 +259,9 @@ pug_html = pug_html + "\u003Cbutton" + (pug.attr("class", pug.classes([buttonCla
 pug_html = pug_html + " ";
 pug_html = pug_html + (pug.escape(null == (pug_interp = buttonText) ? "" : pug_interp)) + "\u003C\u002Fbutton\u003E";
 };
-pug_html = pug_html + "\u003Cdiv class=\"modal\"\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"modal js-modal\"\u003E";
 pug_html = pug_html + "\u003Cdiv class=\"modal-blur\"\u003E\u003C\u002Fdiv\u003E";
-pug_html = pug_html + "\u003Cdiv class=\"modal-content js-modal\"\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"modal-content\"\u003E";
 pug_html = pug_html + "\u003Cimg class=\"modal-content__close js-close-modal\" src=\"\u002Ficons\u002Fclose.svg\" alt=\"close\"\u003E";
 pug_html = pug_html + "\u003Cdiv class=\"modal-content__title\"\u003E";
 pug_html = pug_html + "Овладей нейросетями!\u003C\u002Fdiv\u003E";
@@ -291,8 +291,10 @@ pug_html = pug_html + "Главная\u003C\u002Fa\u003E\u003C\u002Fli\u003E";
 pug_html = pug_html + "\u003Cli class=\"header-list__item header-list-item\"\u003E";
 pug_html = pug_html + "\u003Ca class=\"header-list-item__link\" href=\"#\"\u003E";
 pug_html = pug_html + "Преимущества\u003C\u002Fa\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E";
-pug_mixins["button"]('button button--primary', 'Личный кабинет');
-pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fheader\u003E";
+pug_mixins["button"]('button button--secondary', 'Личный кабинет');
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+pug_html = pug_html + "\u003Cimg class=\"header__burger-icon\" src=\"\u002Ficons\u002Fburger.svg\" alt=\"bigmak\"\u003E";
+pug_html = pug_html + "\u003Cimg class=\"closebtn\" src=\"\u002Ficons\u002Fclose.svg\" alt=\"close\"\u003E\u003C\u002Fheader\u003E";
 pug_mixins["button"] = pug_interp = function(buttonClass, buttonText){
 var block = (this && this.block), attributes = (this && this.attributes) || {};
 pug_html = pug_html + "\u003Cbutton" + (pug.attr("class", pug.classes([buttonClass], [true]), false, true)) + "\u003E";
@@ -307,7 +309,7 @@ pug_html = pug_html + "\u003Ch2 class=\"main-content-ls__title-h2\"\u003E";
 pug_html = pug_html + "может все!\u003C\u002Fh2\u003E";
 pug_html = pug_html + "\u003Cdiv class=\"main-content-ls__subtitle\"\u003E";
 pug_html = pug_html + "Мы уже живем в этой удивительной реальности\u003C\u002Fdiv\u003E";
-pug_mixins["button"]('button button--secondary js-open-modal', 'Погрузиться в новый мир');
+pug_mixins["button"]('button button--primary js-open-modal', 'Погрузиться в новый мир');
 pug_html = pug_html + "\u003C\u002Fdiv\u003E";
 pug_html = pug_html + "\u003Cdiv class=\"main-content__rs main-content-rs\"\u003E";
 pug_html = pug_html + "\u003Cimg src=\"\u002Fimages\u002Fmain.png\" alt=\"main\"\u003E\u003C\u002Fdiv\u003E\u003C\u002Fsection\u003E";
@@ -320,12 +322,48 @@ pug_html = pug_html + (pug.escape(null == (pug_interp = title) ? "" : pug_interp
 pug_html = pug_html + "\u003Cdiv class=\"widget__text\"\u003E";
 pug_html = pug_html + (pug.escape(null == (pug_interp = text) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 };
+pug_html = pug_html + "\u003Cdiv class=\"text-subscription\"\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"text-subscription__title\"\u003E";
+pug_html = pug_html + "Преимущества курса";
+pug_html = pug_html + "\u003Cdiv class=\"text-subscription__content\"\u003E";
+pug_html = pug_html + "Поможем создать ";
+pug_html = pug_html + "\u003Cspan class=\"text-subscription__content--color\"\u003E";
+pug_html = pug_html + "Корректный промт\u003C\u002Fspan\u003E";
+pug_html = pug_html + ", чтобы вы получили максимально корректный вариант под ваши нужды!\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 pug_html = pug_html + "\u003Csection class=\"advantages\"\u003E";
 pug_mixins["widget"]("/icons/goal.svg", "Хотите открыть бизнес?", "Нейросеть поможет составить бизнес-план, рассчитать расходы, нарисовать логотип, найти место получше и станет вашим главным деловым партнером");
 pug_mixins["widget"]("/icons/suitcase.svg", "Мечтаете об отпуске?", "Нейросеть поможет найти место по вашим запросам, выбрать наилучший сезон, собрать чемодан, подыскать где остановиться и сделать ваш отпуск незабываемым");
 pug_mixins["widget"]("/icons/checklist.svg", "Вы студент и нуждаетесь в помощи в учебе?", "Нет проблем! Нейросеть — ваш лучший друг, который поможет написать курсовую, решить сложный тест и подготовиться к экзаменам");
 pug_mixins["widget"]("/icons/mental.svg", "Интересует здоровый образ жизни?", "Нейросеть поделится советами по сбалансированному питанию, безопасным тренировкам и поддержке мотивации.");
 pug_html = pug_html + "\u003C\u002Fsection\u003E\u003C\u002Fdiv\u003E";} catch (err) {pug.rethrow(err, pug_debug_filename, pug_debug_line, pug_debug_sources[pug_debug_filename]);}return pug_html;}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.querySelector('.js-modal');
+  const header = document.querySelector('.header');
+  const burgerIcon = document.querySelector('.header__burger-icon');
+  const closeButton = document.querySelector('.closebtn');
+  
+  const toggleClass = (element, className, action) => {
+    element.classList[action](className);
+  };
+
+  document.addEventListener('click', (e) => {
+    if (e.target.matches('.js-open-modal')) toggleClass(modal, 'active', 'add');
+    if (e.target.matches('.js-close-modal') || e.target === modal) toggleClass(modal, 'active', 'remove');
+    
+    if (e.target.matches('.header__burger-icon')) {
+      toggleClass(header, 'active-mobile', 'add');
+      burgerIcon.style.display = 'none';  // Прячем бургер-иконку
+      closeButton.style.display = 'block';  // Показываем кнопку закрытия
+    }
+
+    if (e.target.matches('.closebtn')) {
+      toggleClass(header, 'active-mobile', 'remove');
+      burgerIcon.style.display = 'block';  // Показываем бургер-иконку
+      closeButton.style.display = 'none';  // Прячем кнопку закрытия
+    }
+  });
+});
 
 document.getElementById('template').innerHTML = template();
 //# sourceMappingURL=bundle.js.map

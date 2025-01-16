@@ -1,74 +1,110 @@
 @use './colors' as c;
-@use './fonts.scss';
+@use './fonts' as f;
 @use './inputs';
-.modal {
-     display: none;  
-    //display: flex;
-}
-.modal-content {
-    padding: 30px 60px 60px 60px;
-    border: 3px solid c.$gray;
-    border-radius: 24px;
-    width: 688px;
-    height: 768px;
-    background: c.$dark-gray;
-    justify-content: flex-start; 
-    align-items: center; 
-    flex-direction: column;  
-    align-content: center;
-    position: fixed;
-    z-index: 2;
-    display: flex;
-   
-    transform: translate(-50%, -50%);
-    z-index: 11;
-    left: 50%;
-    top: 50%;
-    &__close {
-        position: absolute;
-        top: 30px;
-        right: 50px;
-        cursor: pointer;
-    }
-    .modal.active {
-        display: block;
-      }
- 
-    &__title {
-        margin-bottom: 12px;
-        /* subheading */
-        color: c.$white;
-        font-family: 'Involve';
-        font-size: 44px;
-        font-weight: 400;
-        line-height: 110%;
-        margin-top: 30px;
-    }
-    &__subtitle {
-        margin-bottom: 30px;
-        color: c.$white;
-        font-family: 'Envolenta';
-        font-weight: 400;
-        line-height: 110%;
-        font-size: 24px;
-        margin-bottom: 16px;
-    }
-    &__input {
-          margin-bottom: 16px;  
-          width: 100%;
-    }
-    &__button {
-        width: 100%;
-    }
+@use './mixins' as m;
 
+.modal {
+  display: none;
+
+  &.active {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+}
+
+.js-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.js-modal.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0s 0s;
 }
 
 .modal-blur {
-    content: '';
-    backdrop-filter: blur(18px);
-    background: rgba(c.$black, 0.3);
-    z-index: 10;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
+  content: '';
+  backdrop-filter: blur(1.8rem);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.modal-content {
+  padding: 3rem 6rem 6rem 6rem;
+  border: 3px solid c.$gray;
+  border-radius: 2.4rem;
+  max-width: 68.8rem;
+  max-height: 76.8rem;
+  width: 100%;
+  height: auto;
+  background: c.$dark-gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  @include m.mobile {
+    max-width: 28rem;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem ;
+  }
+
+  &__close {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    cursor: pointer;
+    @include m.mobile {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+  }
+
+  &__title,
+  &__subtitle {
+    color: c.$white;
+    font-family: "Involve";
+    font-weight: 400;
+    line-height: 110%;
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+
+  &__title {
+    font-family: "Involve";
+    @include m.text-size(f.$logo-text, f.$logo-text-mobile);
+  }
+
+  &__subtitle {
+    font-family: 'Envolenta';
+    @include m.text-size(f.$body-large, f.$body-large-mobile);
+  }
+
+  &__input {
+    margin-bottom: 1.6rem;
+    width: 100%; 
+  }
+
+  &__button {
+    width: 100%;
+  }
 }

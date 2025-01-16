@@ -1,0 +1,67 @@
+@use "./_colors" as c;
+@use "./_fonts" as f;
+@use './mixins' as m;
+.button {
+    border-radius: 1.8rem;
+    padding: 1.8rem 2.4rem;
+    font-family: "Evolventa";
+    font-weight: 400;
+    line-height: 110%;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-size: 2.4rem;
+    
+    &--primary {
+      background-color: c.$pink-vibrank;
+      color: c.$white;
+      border: 1px solid c.$pink-vibrank;
+      padding: 1.6rem 2.2rem;
+      line-height: 1.9rem;
+      
+      @include m.text-size(f.$body-large, f.$body-large-mobile);
+  
+      &:hover {
+        box-shadow: 0px 0px 3rem 0.2rem rgb(247, 6, 163);
+        background: c.$white;
+        color: c.$black;
+      }
+  
+      &:active {
+        box-shadow: none;
+        background: c.$white;
+        color: c.$black;
+      }
+  
+      &:disabled {
+        background: c.$white;
+        opacity: 0.3;
+        color: c.$black;
+      }
+    }
+  
+    &--secondary {
+      background-color: transparent;
+      color: c.$white;
+      border: 1px solid c.$pink-light;
+        
+      &:hover {
+        background: c.$pink-light;
+        color: c.$black;
+      }
+  
+      &:active {
+        box-shadow: none;
+        background: c.$pink-vibrank;
+        color: c.$black;
+        border: 1px solid transparent;
+      }
+  
+      &:disabled {
+        background: c.$pink-vibrank;
+        opacity: 0.3;
+        color: c.$black;
+      }
+    }
+  }

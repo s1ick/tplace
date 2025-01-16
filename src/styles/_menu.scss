@@ -1,26 +1,105 @@
-@use "./fonts.scss";
+@use "./fonts" as f;
 @use "./colors" as c;
-
+@use "./mixins" as m;
+@use "./buttons";
 .header {
-  height: 99px;
+  height: 9.9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
+  &:after {    
+    position: fixed;
+    z-index: 1;
+    content: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(9px);
+    background: rgba(12, 13, 18, 0.3);
+
+  }
+  &.active-mobile {
+    background-color: c.$black;
+    z-index: 123;
+    &:after {
+      content: '';
+      z-index: -1;
+    }
+    height: auto;
+    & .header__rs {
+      display: flex;
+    }
+  }
+  @include m.mobile {
+    padding: 0 15px;
+    height: 5.7rem;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
   &__list {
-    margin-right: 150px;
+    margin-right: 15rem;
+    @include m.mobile {
+      margin-right: 0;
+    }
   }
   &__rs {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @include m.mobile {
+      display: none;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding: 0px 0px 30px 0px;
+      position: relative;
+        z-index: 12;
+    }
+  }
+  &__burger-icon {
+    display: none;
+    cursor: pointer;
+    z-index: 333;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    @include m.mobile {
+      display: block;
+    }
+  }
+  .closebtn {
+    cursor: pointer;
+    display: none;
+    max-width: 2.2rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    z-index: 40;
   }
 }
+
 .header-list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @include m.mobile {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+  }
   &__item {
-    margin-right: 105px;
+    margin-right: 10.5rem;
+    @include m.mobile {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -30,17 +109,20 @@
   &__link {
     color: #fff;
     font-family: "Evolventa";
-    font-size: 24px;
     font-weight: 400;
     line-height: 110%;
     opacity: 0.6;
     text-decoration: none;
+    @include m.text-size(f.$body-large, f.$body-large-mobile);
+
     &:hover {
       color: c.$pink-light;
     }
+
     &:active {
       color: c.$pink-vibrank;
     }
+
     &:disabled {
       color: c.$pink-vibrank;
       opacity: 0.3;
@@ -51,24 +133,29 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @include m.mobile {
+    width: 100%;
+    padding-top: 1.2rem;
+    z-index: 12;
+  }
   &__icon {
     box-shadow:
       inset -12px -17px 17.1px 0px rgba(13, 12, 18, 0.3),
       inset 3px 4px 10.3px 0px rgba(255, 255, 255, 0.25);
     background: radial-gradient(95.34% 95.34% at 40% 21%, rgb(247, 6, 163), rgb(90, 115, 239) 100%)
       /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    width: 42px;
-    height: 42px;
+    width: 4.2rem;
+    height: 4.2rem;
     border-radius: 50%;
-    margin-right: 6px;
+    margin-right: 0.6rem;
   }
   &__text {
     /* subheading */
     color: #fff;
     font-family: "Involve";
-    font-size: 44px;
     font-weight: 400;
     text-align: left;
     text-transform: uppercase;
+    @include m.text-size(f.$logo-text, f.$logo-text-mobile);
   }
 }
